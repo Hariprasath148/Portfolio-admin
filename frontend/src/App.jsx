@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navigate, Route , RouterProvider , createBrowserRouter , createRoutesFromElements } from "react-router-dom";
 import { MainLayout } from "./layout/MainLayout.jsx";
 import { Home } from "./components/Home.jsx";
@@ -37,7 +38,11 @@ function App() {
   })
 
   if(isLoading) {
-    return <div>Loading</div>
+    return <div className="d-flex justify-content-center align-items-center vh-100 vw-100">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
   }
   const router = createBrowserRouter (
     createRoutesFromElements ( 
