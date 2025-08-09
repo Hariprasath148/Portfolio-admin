@@ -10,7 +10,6 @@ import { AuthLayout } from "./layout/AuthLayout.jsx";
 import { SignUp } from "./components/SignUp.jsx";
 import { useQuery } from "@tanstack/react-query";
 import { baseURL } from "./constant/base.js";
-import {Toaster} from "react-hot-toast";
 
 function App() {
 
@@ -64,7 +63,6 @@ function App() {
   return (
     <>
       <RouterProvider router={router} />
-      <Toaster containerStyle={{ zIndex: 999999999999 }}/>
     </>
   )
 }
