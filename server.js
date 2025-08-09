@@ -34,7 +34,7 @@ app.use("/api/project",projectRoute);
 app.use("/api/auth",userRoute);
 
 if(process.env.NODE_ENV == "production") {
-    app.use(express.static(path.json(_dirname,"/frontend/dist")));
+    app.use(express.static(path.join(_dirname,"/frontend/dist")));
     app.use("*",(req,res)=>{res.sendFile(path.resolve(_dirname,"frontend","dist","index.html"))});
 }
 
