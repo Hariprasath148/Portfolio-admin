@@ -39,8 +39,8 @@ function App() {
 
   if(isLoading) {
     return <div className="d-flex justify-content-center align-items-center vh-100 vw-100">
-      <div class="spinner-border" role="status">
-        <span class="sr-only">Loading...</span>
+      <div class="spinner-border" id="loader" role="status">
+        <span class="sr-only"></span>
       </div>
     </div>
   }
