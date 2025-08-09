@@ -10,7 +10,7 @@ export const LogIn = () => {
   const [ Email , setEmail ] = useState("");
   const [ Password , setPassword ] = useState("");
   const queryClient = useQueryClient();
-  const{ mutate : logIn , isLoading , isError , error } = useMutation({
+  const{ mutate : logIn , isPending , isError , error } = useMutation({
     mutationFn : async ({Email , Password}) => {
         const res = await fetch(`${baseURL}/api/auth/logIn`,{
           method : "POST",
@@ -57,7 +57,7 @@ export const LogIn = () => {
           </div>
         </div>
         {isError && <p className="m-0 text-danger mb-2">{error.message}</p> } 
-        <button disabled={isLoading} type="submit" id="submit-btn" className="w-100 border-0 py-2 mt-2">{ isLoading ? "Loading..." : "LogIn"}</button>
+        <button disabled={isPending} type="submit" id="submit-btn" className="w-100 border-0 py-2 mt-2">{ isPending ? "Loading..." : "LogIn"}</button>
       </form>
       <p className="text-light mt-3">Don't have an Account <NavLink className="ms-1 change-btn" to="/SignUp">SignUp</NavLink></p>
     </div>
