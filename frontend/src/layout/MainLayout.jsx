@@ -4,7 +4,6 @@ import { Outlet } from 'react-router-dom'
 import { NavigationBar } from '../components/NavigationBar.jsx';
 import "../css/mainLayout.css";
 import { MobileNavigationBar } from '../components/MobileNavigationBar.jsx';
-import {Toaster} from "react-hot-toast";
 
 export const MainLayout = () => {
   return (
@@ -19,7 +18,6 @@ export const MainLayout = () => {
              <Outlet/>
           </div>
         </div>
-        <Toaster containerStyle={{ zIndex: 999999999999 }}/>
     </div>
   )
 };

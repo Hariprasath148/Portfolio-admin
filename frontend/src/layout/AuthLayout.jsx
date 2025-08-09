@@ -1,7 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {  Outlet } from 'react-router-dom';
 import "../css/authLayouts.css";
-import {Toaster} from "react-hot-toast";
 
 export const AuthLayout = () => {
   return (
@@ -16,7 +15,6 @@ export const AuthLayout = () => {
                 <Outlet />
             </div>
         </div>
-        <Toaster containerStyle={{ zIndex: 999999999999 }}/>
     </div>
   )
 }

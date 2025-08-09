@@ -11,7 +11,7 @@ export const LogIn = () => {
   const [ Password , setPassword ] = useState("");
   const queryClient = useQueryClient();
   const{ mutate : logIn , isPending , isError , error } = useMutation({
-    mutationFn : async ({Email , Password}) => {
+    mutationFn : async ({Email , Password}) =>   {
         const res = await fetch(`${baseURL}/api/auth/logIn`,{
           method : "POST",
           credentials : "include",
@@ -26,9 +26,9 @@ export const LogIn = () => {
     },
     onSuccess : ()=> {
       toast.success("LogIn Successfully");
-        queryClient.invalidateQueries({
-          queryKey : ["authUser"]
-        });
+      queryClient.invalidateQueries({
+        queryKey : ["authUser"]
+      });
     },
     onError : ()=> {
       toast.error("Unabel to LogIn");
