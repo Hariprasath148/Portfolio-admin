@@ -8,6 +8,7 @@
     width: calc(100% - 157px);
     height: 75px;
     padding: 0 0 0 18px;
+    background: var(--background-light);  
     backdrop-filter: blur(30px);
     border-radius: 25px 0 0 0;
     border-top: 1px solid white;
@@ -17,7 +18,8 @@
 }
 
 .project-content-wrapper {
-    padding: 0 18px 18px 18px; 
+    padding: 0 18px 18px 18px;
+    background: var(--background-light);  
     backdrop-filter: blur(30px);
     border-radius: 0 0 25px 25px;
     border-left: 1px solid white;
@@ -57,7 +59,8 @@
     height: 36px;
     right: 1px;
     bottom: 0px;
-    transform: translateX(100%);  
+    transform: translateX(100%);
+    background: var(--background-light);  
     backdrop-filter: blur(30px);
     z-index: -1;
     clip-path: path("M 0,0 L 17.5,0 L 17.3,10 A 13,13 0,0,0 29,20.1 L 42,20.1 L 42,37 L 0,37 Z");
@@ -96,7 +99,8 @@
     width: 17px;
     height: 39px;
     left: -16px;
-    top: 0; 
+    top: 0;
+    background: var(--background-light);  
     backdrop-filter: blur(30px);
     border-top-right-radius: 25px;
     border-top: 1px solid white;
@@ -111,6 +115,7 @@
     bottom: 0;
     height: 17px;
     width: calc(100% - 24px);
+    background: var(--background-light);  
     backdrop-filter: blur(30px);
     border-top-right-radius: 25px;
     border-top: 1px solid white;
@@ -180,6 +185,7 @@
 }
 
 .project-navigation {
+    background-color: var(--background-light);
     backdrop-filter: blur(30px);
     border-radius: 25px;
     border: 1px solid white;

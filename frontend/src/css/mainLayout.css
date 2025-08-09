@@ -13,6 +13,7 @@
 
 .desktop-navigation-container {
     height: 266px;
+    background: var(--background-light);  
     border: 1px solid white;
     border-radius: 25px;
     backdrop-filter: blur(30px);

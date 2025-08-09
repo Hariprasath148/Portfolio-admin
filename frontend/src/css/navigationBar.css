@@ -55,7 +55,6 @@
     width: 100px;
 }
 
-
 @media (max-width : 576px) {
     .desktop-navigation-container {
         display: none !important;
