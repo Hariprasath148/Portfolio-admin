@@ -163,8 +163,8 @@ export const EditProject = ({ onClose , project }) => {
                 ))
               }
             </div>
-             <div className="form-group mt-3">
-              <label htmlFor="keyPointInput">Enter the Technology Used</label>
+             <div className="form-group mt-3 mb-2">
+              <label htmlFor="keyPointInput">Enter the KeyPoints</label>
               <div  className="form-group keyPoints-container gap-2 d-flex justify-content-between mt-2">
                 <input className="form-control" id="keyPointInput" placeholder="Add the Key Points"/>
                 <button type="button" className="border-0 px-4 rounded-2" onClick={addNewKeyPointByInput}>Add</button>
@@ -179,7 +179,7 @@ export const EditProject = ({ onClose , project }) => {
               }
             </div>
           </div>
-          <div className="col-12 mt-2"><button type="submit" className="w-100 py-2 border-0 add-new-project-form-submit-button" disabled={isPending}>{isPending ? "Saving" : "Save"}</button></div>
+          <div className="col-12 mt-2"><button type="submit" className="w-100 py-2 border-0 add-new-project-form-submit-button" disabled={isPending}>{isPending ? "Updating..." : "Update"}</button></div>
         </form>
       </div>
     </div>
