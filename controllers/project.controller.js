@@ -14,7 +14,7 @@ export const addNewProject = async (req,res)=>{
         const user = req.user;
         const userData = await User.findOne({_id : user._id});
         if(!userData) return res.status(400).json({error : "User not Found"});
-        const {Name , ShortDiscription , FullDiscription , SiteLink , CodeLink ,  Technology , KeyPoints } = req.body;
+        const {Name , ShortDiscription , FullDiscription , SiteLink , CodeLink ,  Technology , KeyPoints , Category } = req.body;
         if(!Name || !ShortDiscription || !FullDiscription){
             return res.status(400).json({message : "Some of the field is Missing."});
         }
@@ -26,6 +26,7 @@ export const addNewProject = async (req,res)=>{
             Name,
             ShortDiscription,
             FullDiscription,
+            Category : Category.toLowerCase(),
             Img : imgUrl.secure_url,
             HeroImg : heroUrl.secure_url
         };
@@ -76,7 +77,7 @@ export const updateProject = async(req,res) => {
         if(!id) {
             return res.status(400).json({message : "ID is miissing to update the record"});
         }
-        const {Name , ShortDiscription , FullDiscription , SiteLink , CodeLink ,  Technology , KeyPoints } = req.body;
+        const {Name , ShortDiscription , FullDiscription , SiteLink , CodeLink ,  Technology , KeyPoints , Category } = req.body;
         const imgFile = req.files?.Img?.[0] || null;
         const heroImgFile = req.files?.HeroImg?.[0] || null;
 
@@ -103,6 +104,7 @@ export const updateProject = async(req,res) => {
         project.CodeLink = CodeLink || project.CodeLink;
         project.Technology = JSON.parse(Technology) || project.Technology;
         project.KeyPoints = JSON.parse(KeyPoints) || project.KeyPoints;
+        project.Category = Category.toLowerCase() || project.Category;
         if (uploadedImg) project.Img = uploadedImg.secure_url;
         if (uploadedHeroImg) project.HeroImg = uploadedHeroImg.secure_url;
 

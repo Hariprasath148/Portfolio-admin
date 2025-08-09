@@ -34,6 +34,10 @@ const projectSchema = new mongoose.Schema({
         type : String,
         required : true
     },
+    Category : {
+        type : String,
+        required : true
+    },
     Technology : [TechSchema],
     KeyPoints : {
         type : [String]

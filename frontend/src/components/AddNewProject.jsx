@@ -11,6 +11,7 @@ export const AddNewProject = ({ onClose }) => {
   const[name , setName] = useState("");
   const[shortDiscription , setshortDiscription] = useState("");
   const[longDiscription , setLongDiscription] = useState("");
+  const[category , setCategory] = useState("");
   const[siteLink , setSiteLink] = useState("");
   const[codeLink , setCodeLink] = useState("");
   const[mainImg , setMainImg] = useState("");
@@ -99,6 +100,7 @@ export const AddNewProject = ({ onClose }) => {
     formdata.append("Name" , name);
     formdata.append("ShortDiscription" , shortDiscription);
     formdata.append("FullDiscription" , longDiscription);
+    formdata.append("Category" , category);
     formdata.append("SiteLink" , siteLink);
     formdata.append("CodeLink" , codeLink);
     formdata.append("Img" , mainImg);
@@ -149,7 +151,11 @@ export const AddNewProject = ({ onClose }) => {
             </div>
           </div>
           <div className="col-lg-6 col-12">
-            <div className="form-group mt-1">
+            <div className="form-group mt-2">
+              <label htmlFor="Category" className="mb-1">Enter the Category<span>*</span></label>
+              <input className="form-control" id="Category" type="text" value={category} onChange={(e)=>setCategory(e.target.value)} placeholder="Category" required/>
+            </div>
+            <div className="form-group mt-3">
               <label htmlFor="technology">Enter the Technology Used</label>
               <div  className="form-group tech-container mt-2">
                 <input className="form-control" placeholder="Tech Name" id="newTechInput"/>
