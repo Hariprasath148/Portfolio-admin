@@ -8,7 +8,7 @@ import {Toaster} from "react-hot-toast";
 
 export const MainLayout = () => {
   return (
-    <div className="p-md-3 p-2 vh-100" id="Main-layout-container">
+    <div className="p-md-3 p-2" id="Main-layout-container">
         <Header/>
         <div className='main-wrapper-container d-flex m-0'>
           <div className="d-flex flex-column gap-4 navgationBar-container desktop-navigation-container px-2 py-2 mt-2">
