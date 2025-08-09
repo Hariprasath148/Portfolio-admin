@@ -1,0 +1,56 @@
+
+.navigator-wrapper {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+
+.navLink-icon {
+    color: var(--base-light);
+    padding: 10px;
+    display: flex;
+    background-color: var(--base-color2);
+    border-radius: 100%;
+    transition: 0.3s all ease-in-out;
+}
+
+.logoutButton {
+    color: var(--base-light);
+    padding: 10px;
+    display: flex;
+    background-color: var(--base-color2);
+    border-radius: 100%;
+    transition: 0.3s all ease-in-out;
+    border: 0 !important;
+}
+
+.navLink-icon.active , .navLink-icon:hover , .logoutButton:hover{
+    background-color: var(--base-color);
+    color: var(--base-color2);
+}
+
+.navLink-discription {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.1s all ease-in-out;
+    left: 140%;
+    width: 0;
+    z-index: 1000;
+    overflow: hidden;
+    background-color: var(--base-color2);
+    box-shadow: var(--base-shadow);
+    color: var(--main-color);
+}
+
+.navLink-icon:hover + .navLink-discription {
+    padding:  5px 10px;
+    border: 1px solid var(--main-color);
+    width: 100px;
+}
+
+@media (max-width : 576px) {
+    .desktop-navigation-container {
+        display: none !important;
+    }
+}

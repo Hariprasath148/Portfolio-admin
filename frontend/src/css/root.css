@@ -1,0 +1,34 @@
+
+:root {
+    --base-color : black;
+    --base-color2 : white;
+    --main-color : #830f98;
+    --main-shadow-color : #8000806c ;
+    --base-light : #909090;
+    --background-light : rgba(0, 0, 0, 0.05);
+    --base-shadow : 0 0 2px var(--main-color);
+    /* --body-background : #e2e3e5; */
+    --body-background : url(/bgLight.png);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100dvh;
+}
+
+body.dark {
+  --body-background : #212121;
+  --base-color : white;
+  --base-color2 : black;
+  --background-light :rgba(255, 255, 255, 0.15);
+  --body-background : url(/authBg.png);
+}
+
+#root {
+  height: 100%;
+}

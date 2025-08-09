@@ -1,0 +1,38 @@
+
+#Main-layout-container {
+    background-image: var(--body-background);
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: fit-content;
+}
+
+.outlet-container {
+    padding-left: 20px;
+}
+
+.desktop-navigation-container {
+    height: 266px;
+    background: var(--background-light);  
+    border: 1px solid white;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    margin-top: 12px !important;
+}
+
+#toaster-main {
+    z-index: 9999999999999999;
+}
+
+@media (max-width : 576px) {
+    .desktop-navigation-container {
+        display: none !important;
+    }
+
+    .outlet-container {
+        padding-left: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

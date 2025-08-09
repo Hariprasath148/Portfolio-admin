@@ -1,0 +1,92 @@
+
+.auth-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/authBg.png);
+    background-size: cover;
+    overflow-y: auto;
+}
+
+.auth-container {
+    min-height: 520px !important;
+    max-width: 920px !important;
+    width: 100% !important;
+    border: 1px solid white;
+    background-color: var(--background-light);
+    backdrop-filter: blur(30px);
+    border-radius: 35px;
+}
+
+.auth-info-container {
+    background-color: var(--main-color);
+    background-image: url(/desk.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    border-radius: 25px;
+    min-height: 450px;
+}
+
+.auth-info-container p:nth-child(1) {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.login-signUp-logIn{
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container .eye-icon {
+    position: absolute;
+    top: 50%;
+    right : 10px;
+    transform: translateY(-50%);
+    color: black;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#password {
+    padding-right: 50px;
+}
+
+#submit-btn {
+    background-color: var(--main-color);
+    border-radius: 50px;
+    transition: 0.2s all ease-in-out;
+    color: white;
+    box-shadow: 0 0 10px white;
+}
+
+#submit-btn:hover {
+    background-color: white;
+    color: var(--main-color);
+}
+
+.auth-input:focus {
+    border-color: var(--main-color) !important;
+    box-shadow: 0 0 0 .25rem rgb(139, 182, 199 ,.25) !important;
+}
+
+@media (max-height : 500px) {
+    .auth-wrapper {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width : 991px) {
+    .auth-wrapper {
+        align-items: flex-start;
+    }
+
+    .auth-info-container {
+        margin-bottom: 20px;
+    }
+}

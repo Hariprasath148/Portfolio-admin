@@ -1,0 +1,237 @@
+
+.project-container { 
+    color: var(--base-color);
+    position: relative;
+}
+
+.project-title-wrapper {
+    width: calc(100% - 157px);
+    height: 75px;
+    padding: 0 0 0 18px;
+    background: var(--background-light);  
+    backdrop-filter: blur(10px);
+    border-radius: 25px 0 0 0;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    position: relative;
+    z-index: 300;
+}
+
+.project-content-wrapper {
+    padding: 0 18px 18px 18px;
+    background: var(--background-light);  
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 25px 25px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    position: relative;
+    z-index: 200;
+}
+
+.transparent-curve {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: -25.3px;
+    bottom: 16.6px;
+    transform: translateX(100%);
+    background-color: transparent;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    border-radius: 0 0 0 50%;
+}
+
+.white-curve {
+   position: absolute;
+    width: 12.5px;
+    height: 11.5px;
+    right: 0.9px;
+    bottom: -0.2px;
+    transform: translateX(100%);
+    background-color: var(--base-color2);
+    clip-path: path("M 0,0 A 12.25,12.25 0,0,0 12.5,12.5 L 0,12.5 Z");
+}
+
+.tranparent-box {
+    position: absolute;
+    width: 42px;
+    height: 36px;
+    right: 1px;
+    bottom: 0px;
+    transform: translateX(100%);
+    background: var(--background-light);  
+    backdrop-filter: blur(10px);
+    z-index: -1;
+    clip-path: path("M 0,0 L 17.5,0 L 17.3,10 A 13,13 0,0,0 29,20.1 L 42,20.1 L 42,37 L 0,37 Z");
+}
+
+.project-header {
+    width: calc(100% - 18px);
+    height: 75px;
+    font-size: 24px;
+    background-color: var(--base-color2);
+    padding: 0 25px 0 25px;
+    border-radius: 16px 16px 0 0;
+    position: absolute;
+    top: 18px;
+    z-index: 200;
+    overflow: hidden;
+}
+
+.project-content-container {
+    background-color: var(--base-color2);
+    padding: 0 25px 25px 25px;
+    border-radius: 0 18px 18px 18px;
+}
+
+.project-deleteAndEdit-container {
+    width: 141px;
+    height: 75px;
+    padding-bottom: 16px;
+    gap: 14px;
+    position: relative;
+}
+
+.project-deleteAndEdit-container::after {
+    position: absolute;
+    content: "";
+    width: 17px;
+    height: 39px;
+    left: -16px;
+    top: 0;
+    background: var(--background-light);  
+    backdrop-filter: blur(10px);
+    border-top-right-radius: 25px;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    z-index: 300;
+}
+
+.project-deleteAndEdit-container::before {
+    position: absolute;
+    content: "";
+    left: 24px;
+    bottom: 0;
+    height: 17px;
+    width: calc(100% - 24px);
+    background: var(--background-light);  
+    backdrop-filter: blur(10px);
+    border-top-right-radius: 25px;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    z-index: 300;
+}
+
+.project-deleteAndEdit-button {
+    padding: 10px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    backdrop-filter: blur(10px);
+}
+
+.project-deleteAndEdit-button:hover {
+    box-shadow: 0 0 10px white;
+}
+
+.project-edit-button {
+    background-color: var(--base-color2);
+    color: var(--base-light);
+    border: 1px solid white !important;
+}
+
+.project-delete-button {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.project-img-container {
+    max-height: 250px;
+}
+
+.project-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.view-button {
+    background-color: var(--main-color);
+    color: white;
+} 
+
+.code-button {
+    background-color: #90909030;
+    color: var(--base-color);
+}
+
+.project-title {
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.project-discription {
+    max-height: 168px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.project-container-wrapper {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.project-navigation {
+    background-color: var(--background-light);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    border: 1px solid white;
+    margin-top: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.project-navigation p {
+    font-size: 18px;
+    color: white;
+}
+
+.add-new-project-button {
+    border-radius: 25px;
+    background-color: white;
+    transition: 0.2s all ease-in-out;  
+}
+
+.add-new-project-button:hover {
+    background-color: var(--main-color); 
+    color: white;
+}
+
+.link-container a{
+    transition: 0.2s all ease-in-out;
+}
+
+.link-container a:hover {
+    box-shadow: 0 0 10px var(--base-light);
+}
+
+.record-not-found {
+    color: var(--base-color);
+}
+
+@media (max-width : 460px) {
+    .project-title-wrapper {
+        width: calc(60% - 16px);
+    }
+
+    .project-deleteAndEdit-container {
+        width: 40%;
+    }
+
+    .project-header {
+        font-size: 22px;
+    }
+}
