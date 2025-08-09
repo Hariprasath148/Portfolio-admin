@@ -32,11 +32,14 @@ app.use(cors({
 
 app.use("/api/project",projectRoute);
 app.use("/api/auth",userRoute);
+app.get("/",async(req,res)=> {
+    res.send("from the server");
+})
 
-if(process.env.NODE_ENV == "production") {
-    app.use(express.static(path.join(_dirname,"/frontend/dist")));
-    app.get("/*",(req,res)=>{res.sendFile(path.resolve(_dirname,"frontend","dist","index.html"))});
-}
+// if(process.env.NODE_ENV == "production") {
+// //     app.use(express.static(path.join(_dirname,"/frontend/dist")));
+// //     app.get("/*",(req,res)=>{res.sendFile(path.resolve(_dirname,"frontend","dist","index.html"))});
+// // }
 
 app.listen(PORT,()=>{
     console.log("The server is running in the port :",PORT);
