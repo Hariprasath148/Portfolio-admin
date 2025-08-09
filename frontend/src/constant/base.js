@@ -1,1 +1,1 @@
-export const baseURL = " http://localhost:5500"
+export const baseURL = "https://portfolio-admin-dun.vercel.app/"
