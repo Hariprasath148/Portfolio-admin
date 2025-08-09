@@ -80,4 +80,5 @@
 
 #add-new-project-form input:focus {
     box-shadow: 0 0 0 .25rem var(--main-shadow-color);
+    border: 1px solid var(--main-color);
 }

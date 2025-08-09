@@ -49,6 +49,13 @@
     width: 100px;
 }
 
+.logoutButton:hover + .navLink-discription {
+    padding:  5px 10px;
+    border: 1px solid var(--main-color);
+    width: 100px;
+}
+
+
 @media (max-width : 576px) {
     .desktop-navigation-container {
         display: none !important;
