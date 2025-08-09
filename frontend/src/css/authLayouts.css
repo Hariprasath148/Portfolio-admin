@@ -13,7 +13,7 @@
     max-width: 920px !important;
     width: 100% !important;
     border: 1px solid white;
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(10px);
     border-radius: 35px;
 }
 
