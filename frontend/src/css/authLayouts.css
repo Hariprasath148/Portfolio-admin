@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(/authBg.png);
+    background-image: url(/glassdark.jpeg);
     background-size: cover;
     overflow-y: auto;
 }
@@ -18,13 +18,17 @@
 }
 
 .auth-info-container {
-    background-color: var(--main-color);
+    background-color: white;
     background-image: url(/desk.png);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
     border-radius: 25px;
     min-height: 450px;
+}
+
+.auth-info-container p:nth-child(1) {
+    color: red;
 }
 
 .auth-info-container p:nth-child(1) {
@@ -57,7 +61,7 @@
 }
 
 #submit-btn {
-    background-color: var(--main-color);
+    background-color: #0187f4;
     border-radius: 50px;
     transition: 0.2s all ease-in-out;
     color: white;
@@ -66,7 +70,7 @@
 
 #submit-btn:hover {
     background-color: white;
-    color: var(--main-color);
+    color: #0187f4;
 }
 
 .auth-input:focus {

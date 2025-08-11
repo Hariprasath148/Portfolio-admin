@@ -2,13 +2,13 @@
 :root {
     --base-color : black;
     --base-color2 : white;
-    --main-color : #830f98;
-    --main-shadow-color : #8000806c ;
+    --main-color : #bb8c82;
+    --main-shadow-color : #bb8c8275 ;
     --base-light : #909090;
     --background-light : rgba(0, 0, 0, 0.05);
     --base-shadow : 0 0 2px var(--main-color);
     /* --body-background : #e2e3e5; */
-    --body-background : url(/bgLight.png);
+    --body-background : url(/glass.jpeg);
 }
 
 * {
@@ -22,11 +22,12 @@ body {
 }
 
 body.dark {
+  --main-color : #0187f4;
   --body-background : #212121;
   --base-color : white;
   --base-color2 : black;
   --background-light :rgba(255, 255, 255, 0.15);
-  --body-background : url(/authBg.png);
+  --body-background : url(/glassdark.jpeg);
 }
 
 #root {
